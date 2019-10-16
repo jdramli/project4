@@ -27,9 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to go to the next screen!"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="popoverPresentation" popoverAnchorView="Oni-qy-6br" id="96l-Af-LRT">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="96l-Af-LRT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,13 +42,14 @@
         <!--GameViewController-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController title="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="project4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GameViewController" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="project4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FDu-LS-brx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
