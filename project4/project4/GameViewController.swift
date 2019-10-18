@@ -42,8 +42,8 @@ class GameViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    override func viewWillDisappear(_ animated: Bool) {
+        
     }
 
     override var shouldAutorotate: Bool {
