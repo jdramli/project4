@@ -23,9 +23,6 @@ class GameScene: SKScene {
 
         self.lastUpdateTime = 0
         self.counter = self.childNode(withName: "//count") as? SKLabelNode
-        
-        
-        
     }
     
     

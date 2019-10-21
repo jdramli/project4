@@ -7,14 +7,54 @@
 //
 
 import UIKit
+import SpriteKit
+import GameKit
 
 class StartViewController: UIViewController {
 
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
+        // including entities and graphs.
+        if let scene = GKScene(fileNamed: "StartScene") {
+            
+            // Get the SKScene from the loaded GKScene
+            if let sceneNode = scene.rootNode as! StartScene? {
+                
+                // Copy gameplay related content over to the scene
+                sceneNode.entities2 = scene.entities
+                sceneNode.graphs2 = scene.graphs
+                
+                // Set the scale mode to scale to fit the window
+                //sceneNode.scaleMode = .aspectFill
+                
+                // Present the scene
+                if let view = self.view as! SKView? {
+                    view.presentScene(sceneNode)
+                    
+                    view.ignoresSiblingOrder = true
+                    
+                    view.showsFPS = true
+                    view.showsNodeCount = true
+                }
+            }
+        }
+    }
+    override var shouldAutorotate: Bool {
+        return true
+    }
 
-        // Do any additional setup after loading the view.
-        print("Initial view started")
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 

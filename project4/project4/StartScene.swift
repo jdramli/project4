@@ -1,0 +1,43 @@
+//
+//  StartScene.swift
+//  project4
+//
+//  Created by Joseph Daniel Ramli on 10/18/19.
+//  Copyright © 2019 Joseph Daniel Ramli. All rights reserved.
+//
+
+import SwiftUI
+import SpriteKit
+import GameplayKit
+
+class StartScene: GKScene {
+    var entities2 = [GKEntity]()
+    var graphs2 = [String : GKGraph]()
+    private var welcome: SKLabelNode?
+    private var redsquare : SKSpriteNode?
+    private var clicks = 0
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+    }
+    
+    func sceneDidLoad() {
+        self.redsquare? = self.childNode(withName: "//redsquare") as? SKLabelNode
+        print("Where is the childnode function being called?")
+        
+     
+    }
+    func touchDown(atPoint pos : CGPoint) {
+       
+        clicks = clicks + 1
+        print("Touch down detected and number of clicks is: " + String(clicks) )
+        
+      
+    }
+    func update(){
+        
+    }
+          
+}
+
+
+
