@@ -15,16 +15,16 @@ class StartViewController: UIViewController {
    override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
+        // Load 'StartScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
-        if let scene = GKScene(fileNamed: "StartScene") {
+        if let scene2 = GKScene(fileNamed: "StartScene") {
             
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! StartScene? {
+            if let sceneNode = scene2.rootNode as! StartScene? {
                 
                 // Copy gameplay related content over to the scene
-                sceneNode.entities2 = scene.entities
-                sceneNode.graphs2 = scene.graphs
+                sceneNode.entities2 = scene2.entities
+                sceneNode.graphs2 = scene2.graphs
                 
                 // Set the scale mode to scale to fit the window
                 //sceneNode.scaleMode = .aspectFill

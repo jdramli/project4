@@ -10,7 +10,7 @@ import SwiftUI
 import SpriteKit
 import GameplayKit
 
-class StartScene: GKScene {
+class StartScene: SKScene {
     var entities2 = [GKEntity]()
     var graphs2 = [String : GKGraph]()
     private var welcome: SKLabelNode?
@@ -20,8 +20,8 @@ class StartScene: GKScene {
         Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
     }
     
-    func sceneDidLoad() {
-        self.redsquare? = self.childNode(withName: "//redsquare") as? SKLabelNode
+    override func sceneDidLoad() {
+       // self.redsquare? = self.childNode(withName: "//redsquare") as? SKLabelNode
         print("Where is the childnode function being called?")
         
      
