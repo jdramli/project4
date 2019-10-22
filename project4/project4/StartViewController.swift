@@ -20,18 +20,18 @@ class StartViewController: UIViewController {
         if let scene2 = GKScene(fileNamed: "StartScene") {
             
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene2.rootNode as! StartScene? {
+            if let sceneNode2 = scene2.rootNode as! StartScene? {
                 
                 // Copy gameplay related content over to the scene
-                sceneNode.entities2 = scene2.entities
-                sceneNode.graphs2 = scene2.graphs
+                sceneNode2.entities2 = scene2.entities
+                sceneNode2.graphs2 = scene2.graphs
                 
                 // Set the scale mode to scale to fit the window
-                //sceneNode.scaleMode = .aspectFill
+                sceneNode2.scaleMode = .aspectFill
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
+                    view.presentScene(sceneNode2)
                     
                     view.ignoresSiblingOrder = true
                     

@@ -17,12 +17,14 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     private var counter : SKLabelNode?
     private var clicks = 0
+    private var redgame : SKSpriteNode?
     
     
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
         self.counter = self.childNode(withName: "//count") as? SKLabelNode
+        self.redgame = self.childNode(withName: "//redgame") as? SKSpriteNode
     }
     
     

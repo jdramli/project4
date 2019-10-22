@@ -21,8 +21,8 @@ class StartScene: SKScene {
     }
     
     override func sceneDidLoad() {
-       // self.redsquare? = self.childNode(withName: "//redsquare") as? SKLabelNode
         print("Where is the childnode function being called?")
+        self.redsquare = self.childNode(withName: "//redsquare") as? SKSpriteNode
         
      
     }
