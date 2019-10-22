@@ -22,7 +22,7 @@ class StartScene: SKScene {
     
     override func sceneDidLoad() {
         print("Where is the childnode function being called?")
-        self.redsquare = self.childNode(withName: "//redsquare") as? SKSpriteNode
+        self.view?.backgroundColor = UIColor.black
         
      
     }
