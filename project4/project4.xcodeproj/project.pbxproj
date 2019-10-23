@@ -20,6 +20,7 @@
 		7562CC6A2357566E00C4D33C /* project4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562CC692357566E00C4D33C /* project4Tests.swift */; };
 		7562CC752357566E00C4D33C /* project4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562CC742357566E00C4D33C /* project4UITests.swift */; };
 		7562CC83235756E500C4D33C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562CC82235756E500C4D33C /* StartViewController.swift */; };
+		758941C423609139002A856C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758941C323609139002A856C /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		7562CC742357566E00C4D33C /* project4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project4UITests.swift; sourceTree = "<group>"; };
 		7562CC762357566E00C4D33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7562CC82235756E500C4D33C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		758941C323609139002A856C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				754319FD235A04AB0001B6FF /* StartScene.swift */,
 				7562CC562357566D00C4D33C /* GameViewController.swift */,
 				7562CC82235756E500C4D33C /* StartViewController.swift */,
+				758941C323609139002A856C /* TableViewController.swift */,
 				7562CC582357566D00C4D33C /* Main.storyboard */,
 				7562CC5B2357566E00C4D33C /* Assets.xcassets */,
 				7562CC5D2357566E00C4D33C /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7562CC552357566D00C4D33C /* GameScene.swift in Sources */,
+				758941C423609139002A856C /* TableViewController.swift in Sources */,
 				7562CC83235756E500C4D33C /* StartViewController.swift in Sources */,
 				7562CC572357566D00C4D33C /* GameViewController.swift in Sources */,
 				754319FE235A04AB0001B6FF /* StartScene.swift in Sources */,

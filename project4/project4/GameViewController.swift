@@ -42,10 +42,8 @@ class GameViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-    }
-
+    
+   
     override var shouldAutorotate: Bool {
         return true
     }
