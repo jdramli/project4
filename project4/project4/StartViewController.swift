@@ -15,7 +15,24 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.green
+        
     }
+    
+    var ind = 0
+    let colors = [UIColor.white, UIColor.yellow, UIColor.green, UIColor.orange]
+    
+    @IBAction func pressed(_ sender: Any) {
+        
+        self.view!.backgroundColor = colors[ind]
+        if ind == colors.count - 1 {
+            ind = 0
+        }
+        else{
+            ind = ind + 1
+        }
+    }
+    
+    /*
     var ind = 0
     let colors = [UIColor.black, UIColor.red, UIColor.green, UIColor.blue]
     @IBAction func ButtonAction(_ sender: Any){
@@ -29,7 +46,7 @@ class StartViewController: UIViewController {
     }
     @IBAction func unwindToViewControllerNameHere(segue: UIStoryboardSegue) {
            //nothing goes here
-    }
+    }*/
 
     /*
     let colors = [UIColor.black, UIColor.red, UIColor.green, UIColor.blue]

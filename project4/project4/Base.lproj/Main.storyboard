@@ -39,17 +39,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-ti-sbN">
-                                <rect key="frame" x="2" y="485" width="414" height="149"/>
+                                <rect key="frame" x="2" y="485" width="414" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to go to the ViewController w/added tableview"/>
                                 <connections>
-                                    <segue destination="FFt-TK-8UC" kind="show" id="QyK-U4-wl5"/>
+                                    <segue destination="7CR-4K-jPM" kind="show" id="uEg-GM-W1s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKG-fP-PD5">
-                                <rect key="frame" x="70" y="620" width="242" height="30"/>
+                                <rect key="frame" x="72" y="694" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click to change background maybe"/>
+                                <state key="normal" title="Click to change background  color"/>
+                                <connections>
+                                    <action selector="pressed:" destination="teg-9Z-Itr" eventType="touchUpInside" id="ojJ-z9-uqc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,42 +98,50 @@
             </objects>
             <point key="canvasLocation" x="-117" y="294"/>
         </scene>
-        <!--Prof Example Table View Controller-->
-        <scene sceneID="wyp-Kz-5MI">
+        <!--View Controller-->
+        <scene sceneID="ubi-B5-F9J">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="FFt-TK-8UC" customClass="ProfExampleTableViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vPb-hH-TzT">
+                <viewController modalPresentationStyle="fullScreen" id="7CR-4K-jPM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UFg-dk-VIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e99-KI-A93">
-                                <rect key="frame" x="153" y="767" width="101" height="30"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-Jz-Rst">
+                                <rect key="frame" x="87" y="94" width="240" height="468"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dx-vdm">
+                                <rect key="frame" x="131" y="753" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Return to Main"/>
+                                <state key="normal" title="Return to Start Screen"/>
                                 <connections>
-                                    <segue destination="teg-9Z-Itr" kind="show" id="1Ut-dO-mRH"/>
+                                    <segue destination="teg-9Z-Itr" kind="show" id="szE-d7-iIY"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Wl-s2T">
-                                <rect key="frame" x="52" y="71" width="290" height="333"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dim-Ko-MEm">
+                                <rect key="frame" x="151" y="649" width="113" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test printnums()"/>
+                                <connections>
+                                    <action selector="pressed:" destination="3Tw-zN-GYw" eventType="touchUpInside" id="MDI-8J-Gdy"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="v2T-ab-ZRn" firstAttribute="bottom" secondItem="EmB-Wl-s2T" secondAttribute="bottom" constant="458" id="HVh-4f-eEP"/>
-                            <constraint firstItem="EmB-Wl-s2T" firstAttribute="top" secondItem="v2T-ab-ZRn" secondAttribute="top" constant="27" id="IGn-Ov-XmZ"/>
-                            <constraint firstItem="v2T-ab-ZRn" firstAttribute="trailing" secondItem="EmB-Wl-s2T" secondAttribute="trailing" constant="72" id="IPV-on-kA1"/>
-                            <constraint firstItem="EmB-Wl-s2T" firstAttribute="leading" secondItem="v2T-ab-ZRn" secondAttribute="leading" constant="52" id="c6b-Kr-n2J"/>
+                            <constraint firstItem="zmE-Vd-lNf" firstAttribute="bottom" secondItem="WaN-Jz-Rst" secondAttribute="bottom" constant="300" id="dWr-mN-rh3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WaN-Jz-Rst" secondAttribute="trailing" constant="67" id="dkY-l4-NDS"/>
+                            <constraint firstItem="WaN-Jz-Rst" firstAttribute="top" secondItem="zmE-Vd-lNf" secondAttribute="top" constant="50" id="e1Q-lc-fzY"/>
+                            <constraint firstItem="WaN-Jz-Rst" firstAttribute="leading" secondItem="UFg-dk-VIM" secondAttribute="leadingMargin" constant="67" id="gfn-VG-EdQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="v2T-ab-ZRn"/>
+                        <viewLayoutGuide key="safeArea" id="zmE-Vd-lNf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="W6O-kE-iKx"/>
+                    <navigationItem key="navigationItem" id="62O-Z8-vrz"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gZb-dg-XFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asD-Dc-zKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3Tw-zN-GYw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-117.39130434782609" y="1074.1071428571429"/>
+            <point key="canvasLocation" x="-149.27536231884059" y="1015.8482142857142"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fbP-ML-470">
@@ -189,6 +200,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="awg-56-WQ6"/>
-        <segue reference="1Ut-dO-mRH"/>
+        <segue reference="szE-d7-iIY"/>
     </inferredMetricsTieBreakers>
 </document>
