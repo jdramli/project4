@@ -101,15 +101,11 @@
         <!--View Controller-->
         <scene sceneID="ubi-B5-F9J">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="7CR-4K-jPM" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="7CR-4K-jPM" customClass="ViewController" customModule="project4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFg-dk-VIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-Jz-Rst">
-                                <rect key="frame" x="87" y="94" width="240" height="468"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dx-vdm">
                                 <rect key="frame" x="131" y="753" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,12 +124,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="zmE-Vd-lNf" firstAttribute="bottom" secondItem="WaN-Jz-Rst" secondAttribute="bottom" constant="300" id="dWr-mN-rh3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WaN-Jz-Rst" secondAttribute="trailing" constant="67" id="dkY-l4-NDS"/>
-                            <constraint firstItem="WaN-Jz-Rst" firstAttribute="top" secondItem="zmE-Vd-lNf" secondAttribute="top" constant="50" id="e1Q-lc-fzY"/>
-                            <constraint firstItem="WaN-Jz-Rst" firstAttribute="leading" secondItem="UFg-dk-VIM" secondAttribute="leadingMargin" constant="67" id="gfn-VG-EdQ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zmE-Vd-lNf"/>
                     </view>
                     <navigationItem key="navigationItem" id="62O-Z8-vrz"/>
