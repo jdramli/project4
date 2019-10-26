@@ -106,20 +106,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dim-Ko-MEm" userLabel="Print Value">
+                                <rect key="frame" x="120" y="44" width="175" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jump to Top"/>
+                                <connections>
+                                    <action selector="pressed:" destination="3Tw-zN-GYw" eventType="touchUpInside" id="MDI-8J-Gdy"/>
+                                    <action selector="pressedVC2:" destination="7CR-4K-jPM" eventType="touchUpInside" id="UbW-bS-eWo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dx-vdm">
-                                <rect key="frame" x="131" y="753" width="153" height="30"/>
+                                <rect key="frame" x="131" y="832" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Return to Start Screen"/>
                                 <connections>
                                     <segue destination="teg-9Z-Itr" kind="show" id="szE-d7-iIY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dim-Ko-MEm">
-                                <rect key="frame" x="151" y="649" width="113" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test printnums()"/>
-                                <connections>
-                                    <action selector="pressed:" destination="3Tw-zN-GYw" eventType="touchUpInside" id="MDI-8J-Gdy"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -12,6 +12,7 @@ import GameKit
 
 class StartViewController: UIViewController {
 
+    public var total = 0 //adding this as a variable that may be able to be inserted into the existing table
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.green
@@ -23,6 +24,8 @@ class StartViewController: UIViewController {
     
     @IBAction func pressed(_ sender: Any) {
         
+        total += 1 //incremeting the counter to track the "highest numbers of background color changes"
+        print(self.getTotal())
         self.view!.backgroundColor = colors[ind]
         if ind == colors.count - 1 {
             ind = 0
@@ -30,6 +33,10 @@ class StartViewController: UIViewController {
         else{
             ind = ind + 1
         }
+    }
+    
+    func getTotal() -> Int{
+        return self.total
     }
     
     /*

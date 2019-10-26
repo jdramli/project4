@@ -11,8 +11,9 @@ import Foundation
 
 class ViewController: UIViewController {
 weak var tableView: UITableView!
+    var tempholder = StartViewController().getTotal()
    var items: [String] = [
-        "👽", "🐱", "🐔", "🐶", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
+        "Top Cell", "🐱", "🐔", "🐶", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
     ]
     override func loadView() {
@@ -21,24 +22,29 @@ weak var tableView: UITableView!
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-        self.view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: tableView.topAnchor),
-        self.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
-        self.view.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
-        self.view.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-    ])
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32.0).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
+        tableView.backgroundColor = UIColor.lightGray
+
+        items[2] = String(tempholder)
     self.tableView = tableView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-
         self.tableView.dataSource = self
     }
-    
-    
+   
+    @IBAction func pressedVC2(_ sender: Any) {
+        items[2] = String(tempholder+1)
+        print(items[2])
+    }
+        
+      
+        
     
 }
 extension ViewController: UITableViewDataSource {
@@ -53,6 +59,7 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = item
         return cell
     }
+    
 }
 
  /*
