@@ -13,6 +13,7 @@ class Singleton{
     
     static let shared = Singleton()
     var highscores : [Int] = [5,3,7,8,6,0,1,2,9]
+    var current_clicks = 0
     
     private init(){
         

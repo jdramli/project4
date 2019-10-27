@@ -10,12 +10,13 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController {
-weak var tableView: UITableView!
+    weak var tableView: UITableView!
     var tempholder = StartViewController().getTotal()
    var items: [String] = [
-        "Top Cell", "🐱", "🐔", "🐶", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
+        "Top Cell", "Cell below changes with clicks", "🐔", "Bunch of Emojis Below!", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
     ]
+    //
     override func loadView() {
         super.loadView()
         
@@ -27,8 +28,9 @@ weak var tableView: UITableView!
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
         tableView.backgroundColor = UIColor.lightGray
+        
+        items[2] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
 
-        items[2] = String(tempholder)
     self.tableView = tableView
     }
 
@@ -39,8 +41,7 @@ weak var tableView: UITableView!
     }
    
     @IBAction func pressedVC2(_ sender: Any) {
-        items[2] = String(tempholder+1)
-        print(items[2])
+        items[2] = String(Singleton.shared.current_clicks)
     }
         
       

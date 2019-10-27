@@ -36,9 +36,17 @@ class StartViewController: UIViewController {
             ind = ind + 1
         }
         
-        //Test code to update or access the Singleton() class .swift file that is created to hold highscores
+        //Test code to update or access the Singleton() class .swift file that is created to hold highscores. The idea is that if the number of clicks can be added to the tableview on the other ViewController screen, and then after successfully adding can be adjusted to only add if the score is high enough, and further sort that array, then this would mimic a "highscore" table of some sort.
         singleton_value = Singleton.shared.highscores[total%5]
         print(singleton_value)
+        //
+        //After testing the singleton, and it works, I can update the newly added "current_clicks" variable to track the current number of clicks to compare to an "all time high"
+        Singleton.shared.current_clicks = Singleton.shared.current_clicks + 1
+        print(Singleton.shared.current_clicks)
+        
+        //Now that the above statement successfully updates the static Singleton.shared instance, it would be best to see if this can be added to the table.  This likely must be done by moving to the ViewController code and modifying one of the default "extension" methods to get an "insert" to occur.
+        
+        //After adding it to the table, next we can sort it, or prevent it from being inserted if it is less than the lowest "highscore number of clicks"
         
         
     }
