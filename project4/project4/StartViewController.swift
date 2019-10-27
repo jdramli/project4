@@ -15,13 +15,13 @@ class StartViewController: UIViewController {
     public var total = 0 //adding this as a variable that may be able to be inserted into the existing table
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = UIColor.white
         
     }
     
     var ind = 0
     var singleton_value = 0;
-    let colors = [UIColor.white, UIColor.yellow, UIColor.green, UIColor.orange]
+    let colors = [UIColor.yellow, UIColor.green, UIColor.orange, UIColor.white]
     
     @IBAction func pressed(_ sender: Any) {
         
@@ -45,6 +45,7 @@ class StartViewController: UIViewController {
         print(Singleton.shared.current_clicks)
         
         //Now that the above statement successfully updates the static Singleton.shared instance, it would be best to see if this can be added to the table.  This likely must be done by moving to the ViewController code and modifying one of the default "extension" methods to get an "insert" to occur.
+            //Successfully added a "replace"-style method where it just overwrites the "item" array index with the number of clicks on the ViewController code
         
         //After adding it to the table, next we can sort it, or prevent it from being inserted if it is less than the lowest "highscore number of clicks"
         

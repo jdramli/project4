@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     weak var tableView: UITableView!
     var tempholder = StartViewController().getTotal()
    var items: [String] = [
-        "Top Cell", "Cell below changes with clicks", "🐔", "Bunch of Emojis Below!", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
+        " ", "Each cell can be any string", "These are linked with a Singleton", "Bunch of Emojis Below!", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
     ]
     //
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
         tableView.backgroundColor = UIColor.lightGray
         
-        items[2] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
+        items[0] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
 
     self.tableView = tableView
     }
@@ -48,7 +48,8 @@ class ViewController: UIViewController {
         
     
 }
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
@@ -56,10 +57,21 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        
         let item = self.items[indexPath.item]
         cell.textLabel?.text = item
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("You selected \(indexPath.row)")
+    }
+    /*
+     //This function basically appends a copy of the table to the end of itself for each number above 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    */
+    
     
 }
 

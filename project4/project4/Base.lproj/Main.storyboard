@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oni-qy-6br">
-                                <rect key="frame" x="68" y="301" width="210" height="30"/>
+                                <rect key="frame" x="80" y="573" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to Go to the Game Scene"/>
                                 <connections>
@@ -24,34 +24,41 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7GH-yb-0lf">
-                                <rect key="frame" x="39" y="339" width="334" height="72"/>
+                                <rect key="frame" x="20" y="629" width="334" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to show leaderboard (TableView full Scene)"/>
                                 <connections>
                                     <segue destination="UwE-5f-sy3" kind="show" id="awg-56-WQ6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember to Add Title on each StoryBoard View controller" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I63-JJ-UCk">
-                                <rect key="frame" x="46" y="133" width="327" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-ti-sbN">
-                                <rect key="frame" x="2" y="485" width="414" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click to go to the ViewController w/added tableview"/>
-                                <connections>
-                                    <segue destination="7CR-4K-jPM" kind="show" id="uEg-GM-W1s"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKG-fP-PD5">
-                                <rect key="frame" x="72" y="694" width="234" height="30"/>
+                                <rect key="frame" x="80" y="238" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to change background  color"/>
                                 <connections>
                                     <action selector="pressed:" destination="teg-9Z-Itr" eventType="touchUpInside" id="ojJ-z9-uqc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Functional Links:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjv-iF-aaU">
+                                <rect key="frame" x="61" y="133" width="287" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Links In Development" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxA-VN-HLh">
+                                <rect key="frame" x="36" y="491" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-ti-sbN">
+                                <rect key="frame" x="-114" y="276" width="642" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show table with number of clicks of above button"/>
+                                <connections>
+                                    <segue destination="7CR-4K-jPM" kind="show" id="uEg-GM-W1s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,20 +79,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd8-Ti-0F2">
-                                <rect key="frame" x="81" y="749" width="253" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-3m-952">
+                                <rect key="frame" x="301" y="43" width="103" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click here to go back to start screen!"/>
+                                <state key="normal" title="Leaderboard">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
-                                    <segue destination="teg-9Z-Itr" kind="show" id="RNd-Gc-4go"/>
+                                    <segue destination="7CR-4K-jPM" kind="showDetail" id="eGR-Xk-Ob9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-3m-952">
-                                <rect key="frame" x="152" y="683" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thG-Ni-jOn">
+                                <rect key="frame" x="20" y="47" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Leaderboard"/>
+                                <state key="normal" title="Back to Start Screen">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
-                                    <segue destination="UwE-5f-sy3" kind="show" id="WVI-yd-nWp"/>
+                                    <segue destination="teg-9Z-Itr" kind="show" id="cUW-UF-mJL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117" y="294"/>
+            <point key="canvasLocation" x="-117.39130434782609" y="293.97321428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ubi-B5-F9J">
@@ -132,12 +143,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-Dc-zKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3Tw-zN-GYw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-149.27536231884059" y="1015.8482142857142"/>
+            <point key="canvasLocation" x="701" y="294"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fbP-ML-470">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="UwE-5f-sy3" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="UwE-5f-sy3" customClass="TableViewController" customModule="project4" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="8" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pbE-cS-5k2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,11 +197,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZA-RM-EQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="293.97321428571428"/>
+            <point key="canvasLocation" x="-117" y="1048"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="awg-56-WQ6"/>
-        <segue reference="RNd-Gc-4go"/>
+        <segue reference="eGR-Xk-Ob9"/>
+        <segue reference="cUW-UF-mJL"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
 </document>
