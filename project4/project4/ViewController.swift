@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         tableView.backgroundColor = UIColor.lightGray
         
         items[0] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
+        items[1] = "Moves count from recent game win: " + String(Singleton.shared.highscores[5])
 
     self.tableView = tableView
     }

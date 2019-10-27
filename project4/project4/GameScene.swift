@@ -326,6 +326,8 @@ class GameScene: SKScene {
         if((greensquare?.position.y)! > CGFloat(750) || (greensquare?.position.y)! < -750 || (greensquare?.position.x)! > CGFloat(350) || (greensquare?.position.x)! < -350 ){
                //print("YOU WIN")
             winlabel!.text = ("YOU DID IT!")
+            //Adding a line of code below to see if this will update a cell in the leaderboard table by printing the current value of the "moves" variable into a cell, like cell 5
+            Singleton.shared.highscores[5] = moves
             
         }
         //wincondition = (greensquare!.position.y > CGFloat(750) || greensquare!.position.y < CGFloat(750) || //greensquare!.position.x > CGFloat(350) || greensquare!.position.y < CGFloat(-350))
