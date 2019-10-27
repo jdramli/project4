@@ -41,7 +41,14 @@ class GameScene: SKScene {
     //private var spinnyNode : SKShapeNode?
     
     override func sceneDidLoad() {
-
+        
+        if(Singleton.shared.background_color == UIColor.white){
+            self.scene?.backgroundColor = UIColor.systemBlue
+        }
+        else{
+            self.scene?.backgroundColor = Singleton.shared.background_color
+        }
+        
         self.lastUpdateTime = 0
         self.randomize = self.childNode(withName: "//randomize") as? SKSpriteNode
         self.reset = self.childNode(withName: "//reset") as? SKSpriteNode
@@ -327,7 +334,7 @@ class GameScene: SKScene {
                //print("YOU WIN")
             winlabel!.text = ("YOU DID IT!")
             //Adding a line of code below to see if this will update a cell in the leaderboard table by printing the current value of the "moves" variable into a cell, like cell 5
-            Singleton.shared.highscores[5] = moves
+            Singleton.shared.recent_moves = moves
             
         }
         //wincondition = (greensquare!.position.y > CGFloat(750) || greensquare!.position.y < CGFloat(750) || //greensquare!.position.x > CGFloat(350) || greensquare!.position.y < CGFloat(-350))

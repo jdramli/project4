@@ -7,13 +7,16 @@
 //
 
 import Foundation
-
+import UIKit
+//import SpriteKit
 
 class Singleton{
     
     static let shared = Singleton()
     var highscores : [Int] = [5,3,7,8,6,0,1,2,9]
     var current_clicks = 0
+    var background_color : UIColor = UIColor.white
+    var recent_moves = 0
     
     private init(){
         

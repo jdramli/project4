@@ -10,11 +10,17 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController {
-    weak var tableView: UITableView!
-    var tempholder = StartViewController().getTotal()
+   weak var tableView: UITableView!
+   //var tempholder = StartViewController().getTotal()
+    /*
    var items: [String] = [
         " ", "Each cell can be any string", "These are linked with a Singleton", "Bunch of Emojis Below!", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
+    ]
+    */
+    var items: [String] = [
+        "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000",
+        "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000",
     ]
     //
     override func loadView() {
@@ -30,7 +36,7 @@ class ViewController: UIViewController {
         tableView.backgroundColor = UIColor.lightGray
         
         items[0] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
-        items[1] = "Moves count from recent game win: " + String(Singleton.shared.highscores[5])
+        items[1] = "Moves count from recent game win: " + String(Singleton.shared.recent_moves)
 
     self.tableView = tableView
     }
@@ -44,10 +50,6 @@ class ViewController: UIViewController {
     @IBAction func pressedVC2(_ sender: Any) {
         items[2] = String(Singleton.shared.current_clicks)
     }
-        
-      
-        
-    
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     

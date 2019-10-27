@@ -29,6 +29,7 @@ class StartViewController: UIViewController {
         total += 1 //incremeting the counter to track the "highest numbers of background color changes"
         //print(self.getTotal())
         self.view!.backgroundColor = colors[ind]
+        Singleton.shared.background_color = colors[ind]
         if ind == colors.count - 1 {
             ind = 0
         }
