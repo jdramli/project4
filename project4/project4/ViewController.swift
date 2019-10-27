@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     //
     override func loadView() {
         super.loadView()
-        
+        self.view!.backgroundColor = Singleton.shared.background_color
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)

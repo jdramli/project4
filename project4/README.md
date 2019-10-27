@@ -1,5 +1,9 @@
 # project4
 Make Table Widgets and multiple screens
+
+This project is primarily to implement some form of tableview that will take data from one screen/source and use it to populate a tableview on another screen.  Initially, I had hoped to have enough time to make another fully functioning game, and then add a table, however I ran into many bugs and barriers to progress, and ultimately ended up adding this functionality to my project3 game.  
+The tableview part was ultimately successful, though not perfectly polished from an aesthetics standpoint.  It reliably stores and displays the lowest number of moves to win out of all of the user's game-completions since the app starts.  For fun, I also added the top two cells to show the number of times the background color was changes, and the number of moves to win the most recent game.
+
 Progress log:
 
 10/16: Created repository and start screen with button to get to "Hello World" game.
@@ -38,4 +42,9 @@ Progress log:
             Made a total counter on StartViewController to try to pass into items array
             Made changes to display different data in the TableView.
             
-
+10/27: Implemented a functional update methodology to display the lowest number of moves list for each completion
+           The lowest moves are sorted and displayed in ascending order.
+           Created solutions that allow "number of background color changes" and "most recent number of moves to win" values to be displayed in the tableview ("Leaderboard" screen)
+           Display each of the moves below in the same table.
+           Modified buttons to traverse through the screens and properly,  using the "unwindTo" segue to the correct views. This is critical to maintaining game-speed performance, by not layering views repeatedly on each segue.
+           Segregated the project into functional and work-in-progress button links on the StartViewController (though it is all technically still a work in progress and not quite final-polished).  This maintains some reference to how the initial building/learning process went.
