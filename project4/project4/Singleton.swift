@@ -13,7 +13,11 @@ import UIKit
 class Singleton{
     
     static let shared = Singleton()
-    var highscores : [Int] = [5,3,7,8,6,0,1,2,9]
+    var int_highscores : [Int] = [1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,
+                              1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,]
+    
+    var highscores : [String] = ["1000","1000","1000","1000","1000","1000","1000","1000","1000","1000","1000","1000",
+        "1000","1000","1000","1000","1000","1000","1000","1000","1000","1000","1000","1000",]
     var current_clicks = 0
     var background_color : UIColor = UIColor.white
     var recent_moves = 0

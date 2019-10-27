@@ -18,10 +18,15 @@ class ViewController: UIViewController {
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
     ]
     */
+    /*
     var items: [String] = [
         "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000",
         "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000", "1000",
     ]
+     */
+    var items : [String] = Singleton.shared.highscores
+    //var items : [Int] = Singleton.shared.int_highscores
+    //var temp_array : [Int] = Singleton.shared.int_highscores
     //
     override func loadView() {
         super.loadView()
@@ -35,8 +40,18 @@ class ViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
         tableView.backgroundColor = UIColor.lightGray
         
-        items[0] = "Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks)
-        items[1] = "Moves count from recent game win: " + String(Singleton.shared.recent_moves)
+        items.insert("Moves count from recent game win: " + String(Singleton.shared.recent_moves), at: 0)
+        items.insert("Clicks of 'Change Background Color': " + String(Singleton.shared.current_clicks), at: 0)
+        
+        
+        /*
+        //This is just test code for the sort and insert functions for the array. Seems similar to a python mutable list
+         temp_array.insert(5, at: 7)
+         print(temp_array)
+         temp_array.sort()
+         print(temp_array)
+         */
+        
 
     self.tableView = tableView
     }
@@ -47,9 +62,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
     }
    
-    @IBAction func pressedVC2(_ sender: Any) {
-        items[2] = String(Singleton.shared.current_clicks)
-    }
+   
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -62,7 +75,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         let item = self.items[indexPath.item]
-        cell.textLabel?.text = item
+        //cell.textLabel?.text = item
+        cell.textLabel?.text = String(item)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){

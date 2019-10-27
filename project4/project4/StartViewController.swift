@@ -38,7 +38,7 @@ class StartViewController: UIViewController {
         }
         
         //Test code to update or access the Singleton() class .swift file that is created to hold highscores. The idea is that if the number of clicks can be added to the tableview on the other ViewController screen, and then after successfully adding can be adjusted to only add if the score is high enough, and further sort that array, then this would mimic a "highscore" table of some sort.
-        singleton_value = Singleton.shared.highscores[total%5]
+        singleton_value = Singleton.shared.int_highscores[total%5]
         print(singleton_value)
         //
         //After testing the singleton, and it works, I can update the newly added "current_clicks" variable to track the current number of clicks to compare to an "all time high"

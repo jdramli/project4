@@ -125,16 +125,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dim-Ko-MEm" userLabel="Print Value">
-                                <rect key="frame" x="120" y="44" width="175" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back to GameScene"/>
-                                <connections>
-                                    <action selector="pressed:" destination="3Tw-zN-GYw" eventType="touchUpInside" id="MDI-8J-Gdy"/>
-                                    <action selector="pressedVC2:" destination="7CR-4K-jPM" eventType="touchUpInside" id="UbW-bS-eWo"/>
-                                    <segue destination="3Tw-zN-GYw" kind="unwind" unwindAction="unwindToGameViewControllerWithSegue:" id="KJi-M4-YYi"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dx-vdm">
                                 <rect key="frame" x="131" y="832" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,6 +133,21 @@
                                     <segue destination="3Tw-zN-GYw" kind="unwind" unwindAction="unwindToStartViewControllerWithSegue:" id="eiU-Z6-vwj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-CK-prL">
+                                <rect key="frame" x="138" y="44" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to GameScene"/>
+                                <connections>
+                                    <segue destination="3Tw-zN-GYw" kind="unwind" unwindAction="unwindToGameViewControllerWithSegue:" id="miS-CF-RBD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lowest Moves to Win HIstory:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdq-zY-bjK">
+                                <rect key="frame" x="94" y="82" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zmE-Vd-lNf"/>
@@ -152,7 +157,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-Dc-zKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3Tw-zN-GYw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="701" y="294"/>
+            <point key="canvasLocation" x="698.55072463768124" y="293.97321428571428"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fbP-ML-470">
