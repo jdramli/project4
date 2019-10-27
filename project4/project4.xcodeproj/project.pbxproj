@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7541B8622363952A005B1A94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7541B8612363952A005B1A94 /* ViewController.swift */; };
 		7541B8E42364EFF5005B1A94 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7541B8E32364EFF5005B1A94 /* README.md */; };
+		7541B8E623652455005B1A94 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7541B8E523652455005B1A94 /* Singleton.swift */; };
 		754319FC235A03370001B6FF /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 754319FB235A03370001B6FF /* StartScene.sks */; };
 		754319FE235A04AB0001B6FF /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754319FD235A04AB0001B6FF /* StartScene.swift */; };
 		7562CC4F2357566D00C4D33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562CC4E2357566D00C4D33C /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		7541B8612363952A005B1A94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7541B8E32364EFF5005B1A94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		7541B8E523652455005B1A94 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		754319FB235A03370001B6FF /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		754319FD235A04AB0001B6FF /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		7562CC4B2357566D00C4D33C /* project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,9 +127,10 @@
 				758941C523622B8C002A856C /* TableViewController.swift */,
 				7562CC82235756E500C4D33C /* StartViewController.swift */,
 				7541B8612363952A005B1A94 /* ViewController.swift */,
-				7541B8E32364EFF5005B1A94 /* README.md */,
+				7541B8E523652455005B1A94 /* Singleton.swift */,
 				7562CC582357566D00C4D33C /* Main.storyboard */,
 				7562CC5B2357566E00C4D33C /* Assets.xcassets */,
+				7541B8E32364EFF5005B1A94 /* README.md */,
 				7562CC5D2357566E00C4D33C /* LaunchScreen.storyboard */,
 				7562CC602357566E00C4D33C /* Info.plist */,
 			);
@@ -292,6 +295,7 @@
 				7562CC83235756E500C4D33C /* StartViewController.swift in Sources */,
 				7562CC572357566D00C4D33C /* GameViewController.swift in Sources */,
 				7541B8622363952A005B1A94 /* ViewController.swift in Sources */,
+				7541B8E623652455005B1A94 /* Singleton.swift in Sources */,
 				754319FE235A04AB0001B6FF /* StartScene.swift in Sources */,
 				7562CC4F2357566D00C4D33C /* AppDelegate.swift in Sources */,
 			);

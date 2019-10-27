@@ -20,12 +20,14 @@ class StartViewController: UIViewController {
     }
     
     var ind = 0
+    var singleton_value = 0;
     let colors = [UIColor.white, UIColor.yellow, UIColor.green, UIColor.orange]
     
     @IBAction func pressed(_ sender: Any) {
         
+        //Code on Button-Press to change background color and increment "total" counter variable
         total += 1 //incremeting the counter to track the "highest numbers of background color changes"
-        print(self.getTotal())
+        //print(self.getTotal())
         self.view!.backgroundColor = colors[ind]
         if ind == colors.count - 1 {
             ind = 0
@@ -33,6 +35,12 @@ class StartViewController: UIViewController {
         else{
             ind = ind + 1
         }
+        
+        //Test code to update or access the Singleton() class .swift file that is created to hold highscores
+        singleton_value = Singleton.shared.highscores[total%5]
+        print(singleton_value)
+        
+        
     }
     
     func getTotal() -> Int{
